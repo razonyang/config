@@ -1,0 +1,78 @@
+order += "disk /"
+order += "disk /home"
+order += "backlight"
+order += "battery_level"
+order += "net_rate"
+order += "sysdata"
+order += "volume_status"
+order += "keyboard_layout"
+order += "time"
+order += "static_string qq"
+order += "static_string chrome"
+order += "static_string firefox"
+order += "static_string music"
+#order += "bluetooth"
+# order += "xrandr"
+
+bluetooth {
+	
+}
+
+backlight {
+	format = "\uf042 {level}%"
+}
+
+volume_status {
+	format = "[\?if=is_input 😮|\uf028]: {percentage}%"
+}
+
+battery_level {
+	charging_character = "\uf0e7"
+	blocks = "\uf244\uf243\uf242\uf241\uf240"
+	format = "{icon} {percent}%"
+}
+
+net_rate {
+	format = "\uf1eb {interface} \uf063 {down}"
+	unit = "KB/s"
+}
+
+disk "/" {
+	format = "/ %free"
+}
+
+disk "/home" {
+	format = "\uf015 %free"
+}
+
+keyboard_layout {
+	format = "\uf11c {layout}"
+}
+
+sysdata {
+	format = "CPU:{cpu_usage} MEM:{mem_used}"
+}
+
+time {
+	format = "\uf017 %m-%d %H:%M:%S"
+}
+
+static_string "qq" {
+	format = "\uf1d6"
+	on_click 1 = "exec /opt/deepinwine/apps/Deepin-QQ/run.sh"
+}
+
+static_string "chrome" {
+	format = "\uf268"
+	on_click 1 = "exec google-chrome-stable"
+}
+
+static_string "firefox" {
+	format = "\uf269"
+	on_click 1 = "exec firefox"
+}
+
+static_string "music" {
+	format = "\uf001"
+	on_click 1 = "exec netease-cloud-music"
+}
