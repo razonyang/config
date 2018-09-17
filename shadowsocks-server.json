@@ -1,0 +1,9 @@
+{
+    "server":"srv1.errlogs.com",
+    "server_port":1234,
+    "local_address":"127.0.0.1",
+    "password":"mySecretPassword",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open":false
+}

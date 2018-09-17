@@ -1,0 +1,17 @@
+[Unit]
+Description=Shadowsocks Server
+After=network.target
+After=syslog.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/shadowsocks.pid
+
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
+
+Restart=on-failure
+
+RestartPreventExitStatus=1
