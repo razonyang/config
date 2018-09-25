@@ -1,5 +1,5 @@
-# PS1
-export PS1="%n@%M %d $ "
+PROMPT='%B%F{red}%n%f@%F{yellow}%M%f in %d%b
+$ '
 
 # Bind keys
 bindkey  "^[[H"   beginning-of-line
