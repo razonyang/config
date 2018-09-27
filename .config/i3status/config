@@ -7,12 +7,9 @@ order += "sysdata"
 order += "volume_status"
 order += "keyboard_layout"
 order += "time"
-order += "static_string qq"
 order += "static_string chrome"
 order += "static_string firefox"
-order += "static_string music"
 #order += "bluetooth"
-# order += "xrandr"
 
 bluetooth {
 	
@@ -23,7 +20,7 @@ backlight {
 }
 
 volume_status {
-	format = "[\?if=is_input 😮|\uf028]: {percentage}%"
+	format = "[\?if=is_input ?|Sound]: {percentage}%"
 }
 
 battery_level {
@@ -42,7 +39,7 @@ disk "/" {
 }
 
 disk "/home" {
-	format = "\uf015 %free"
+	format = "/home %free"
 }
 
 keyboard_layout {
@@ -54,12 +51,7 @@ sysdata {
 }
 
 time {
-	format = "\uf017 %m-%d %H:%M:%S"
-}
-
-static_string "qq" {
-	format = "\uf1d6"
-	on_click 1 = "exec /opt/deepinwine/apps/Deepin-QQ/run.sh"
+	format = "%m-%d %H:%M:%S"
 }
 
 static_string "chrome" {
@@ -70,9 +62,4 @@ static_string "chrome" {
 static_string "firefox" {
 	format = "\uf269"
 	on_click 1 = "exec firefox"
-}
-
-static_string "music" {
-	format = "\uf001"
-	on_click 1 = "exec netease-cloud-music"
 }
