@@ -1,0 +1,8 @@
+# Nginx
+www-servers/nginx http http-cache http2 NGINX_MODULES_HTTP: fastcgi
+
+# PHP
+dev-lang/php bcmath cli exif fileinfo filter fpm gd hash intl json opcache pcntl pdo simplexml soap threads xml
+
+# Vim
+app-editors/vim python
